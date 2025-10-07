@@ -3,77 +3,12 @@ package com.specialdays.entites;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
-@Entity
 public class Event {
-	public Event(Long id, String title, String description, LocalDateTime date, String location, List<String> type) {
-		super();
-		this.id = id;
-		this.title = title;
-		this.description = description;
-		this.date = date;
-		this.location = location;
-		this.type = type;
-	}
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
 	private String description;
 	private LocalDateTime date;
 	private String location;
 	private List<String> type = List.of("Birthday", "Anniversary", "Invitations", "Others");
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public LocalDateTime getDate() {
-		return date;
-	}
-
-	public void setDate(LocalDateTime date) {
-		this.date = date;
-	}
-
-	public String getLocation() {
-		return location;
-	}
-
-	public void setLocation(String location) {
-		this.location = location;
-	}
-
-	public List<String> getType() {
-		return type;
-	}
-
-	public void setType(List<String> type) {
-		this.type = type;
-	}
 }
